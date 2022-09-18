@@ -1,0 +1,19 @@
+https://www.malipages.com/page/2/?post_type&s&listing_category=banque-et-finance
+
+/html/body/div[2]/div[1]/main/div/div/div[1]/nav/div
+/html/body/div[2]/div[1]/main/div/div/div[1]/nav/div/span[1] XPATH 1
+/html/body/div[2]/div[1]/main/div/div/div[1]/nav/div/  a[2] XPATH 10
+/html/body/div[2]/div[1]/main/div/div/div[1]/nav/div/a[1] XPATH 2
+
+
+/html/body/div[2]/div[1]/main/div/div/div[1]/nav/div/a[*]
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/nav/div/span[2] XPATH ...
+
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]
+
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*]                         Racine
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*] /div/h1                  Nom Entreprise
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*] /div/div[1]/span[1]      Adresse 1
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*] /div/div[1]/span[2]      Adresse 2
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*] /div/div[1]/span[3]      Tel
+/html/body/div[2]/div[1]/main/div/div/div[1]/div[1]/article[*] /div/div[2]/div/span[1]  Domaine

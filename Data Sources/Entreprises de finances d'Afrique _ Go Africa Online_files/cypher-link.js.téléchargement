@@ -1,0 +1,47 @@
+(function () {
+    window.Goafrica_OnReady_onLoaded = window.Goafrica_OnReady_onLoaded != null ? window.Goafrica_OnReady_onLoaded : [];
+    window.Goafrica_OnReady_onLoaded.push((deps) => {
+        var jq = deps.jq;
+        var onReady = deps.onReady;
+
+        onReady.createAnonym("jquery", $container => {
+            $container.on("click", "[data-toggle=href]", e => {
+                e.preventDefault();
+                var $dom = jq(e.currentTarget);
+                var href = $dom.data("href");
+        
+                if ($dom.attr("target") === "_blank" || $dom.data("target") === "_blank") {
+                    window.open(href);
+                } else {
+                    window.location.assign(href);
+                }
+            });
+        
+            $container.on("click", "[data-cypher-link]", e => {
+                e.preventDefault();
+        
+                var $dom = jq(e.currentTarget);
+                var cypher = $dom.data("cypher-link");
+                
+                if (cypher.startsWith("_goafrica_")) {
+                    cypher = cypher.replace(/^_goafrica_/, "");                    
+                } else {
+                    cypher = cypher.replace(/^(.....)_goafrica_/, "$1");
+                }
+
+                cypher = cypher
+                    .split("")
+                    .reverse()
+                    .join("");
+                
+                var href = atob(cypher);
+        
+                if ($dom.attr("target") === "_blank" || $dom.data("target") === "_blank" || e.metaKey || e.ctrlKey) {
+                    window.open(href);
+                } else {
+                    window.location.assign(href);
+                }
+            });
+        });
+    });
+})();
